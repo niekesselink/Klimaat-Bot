@@ -27,7 +27,6 @@ class Debug(commands.Cog):
         """Load a cog."""
 
         self.bot.load_extension(f'cogs.{name}')
-        print(f'Cog {name} has been loaded!')
         await ctx.send(f'Cog {name} has been loaded!')
 
     @debug.command()
@@ -35,7 +34,6 @@ class Debug(commands.Cog):
         """Unload a specific cog."""
 
         self.bot.unload_extension(f'cogs.{name}')
-        print(f'Cog {name} has been unloaded!')
         await ctx.send(f'Cog {name} has been unloaded!')
 
     @debug.command()
@@ -45,7 +43,6 @@ class Debug(commands.Cog):
         # Just reload one if not 'all'...
         if name != 'all':
             self.bot.reload_extension(f'cogs.{name}')
-            print(f'Cog {name} has been reloaded!')
             return await ctx.send(f'Cog {name} has been reloaded!')
 
         # Reload all possible cogs which have been loaded...
@@ -54,7 +51,6 @@ class Debug(commands.Cog):
                 cog = file[:-3]
                 try:
                     self.bot.reload_extension(f'cogs.{cog}')
-                    print(f'Cog {cog} has been reloaded!')
                     await ctx.send(f'Cog {cog} has been reloaded!')
                 except:
                     pass
@@ -68,7 +64,6 @@ class Debug(commands.Cog):
         importlib.reload(util)
 
         # Inform...
-        print(f'Util {name} has been (re)loaded!')
         await ctx.send(f'Util {name} has been (re)loaded!')
 
     @debug.command()

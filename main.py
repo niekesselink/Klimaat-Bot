@@ -17,8 +17,8 @@ class Bot(commands.Bot):
             self.config = json.load(data, object_hook=lambda d: namedtuple('X', d.keys())(*d.values()))
             
         # Declare intents.
-        #intents = discord.Intents.default()
-        #intents.members = True
+        intents = discord.Intents.default()
+        intents.members = True
 
         # Call the initialize of the bot itself.
         super().__init__(
