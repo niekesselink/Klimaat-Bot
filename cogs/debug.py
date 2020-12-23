@@ -77,7 +77,7 @@ class Debug(commands.Cog):
         stdout, stderr = await self.run_process('git pull')
 
         # Inform the report.
-        await ctx.send(embed=embed.create(
+        await ctx.send(embed=discord.Embed(
             title='Git pulling...',
             description=f'```diff\n{stdout}\n{stderr}\n```'
         ))
