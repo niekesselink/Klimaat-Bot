@@ -10,7 +10,7 @@ class Info(commands.Cog):
         self.bot = bot
 
     @commands.command()
-    async def opensource(self, ctx, name):
+    async def opensource(self, ctx):
         """Informs that the bot is indeed open-source and post the link to the code."""
 
         await ctx.send(f'De bot is open-source! De code van de bot is hier terug te vinden; https://github.com/niekesselink/Klimaat-Bot')
