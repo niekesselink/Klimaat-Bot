@@ -40,4 +40,4 @@ class Roles(commands.Cog):
         await ctx.send('Done adding roles!')
 
 def setup(bot):
-    bot.add_cog(Info(bot))
+    bot.add_cog(Roles(bot))
