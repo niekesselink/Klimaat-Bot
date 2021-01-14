@@ -25,7 +25,7 @@ class Events(commands.Cog):
 
         # Add the 'Lid' role in case it's the national server.
         if member.guild.id == 536211241589276698:
-            role = guild.get_role(799057755579088908)
+            role = member.guild.get_role(799057755579088908)
             await member.add_roles(role)
 
     @commands.command()
