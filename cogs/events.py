@@ -21,7 +21,7 @@ class Events(commands.Cog):
         """Event that happens once a member joins the guild the bot is in."""
 
         # Send welcome message
-        #await self.send_welcome(self, member)
+        await self.send_welcome(member)
 
         # Add the 'Lid' role in case it's the national server.
         if member.guild.id == 536211241589276698:
